@@ -65,3 +65,10 @@ A consistent IP address makes it easier to document the lab and reference the Ka
 
 # Step 6. Create a Clean VM Snapshot
 After completing the initial configuration, a VirtualBox snapshot was created.
+here is the snapshot of Kali Linux VM:
+<img width="1918" height="955" alt="image" src="https://github.com/user-attachments/assets/16cc2da8-05da-421d-87b9-e0ebfb035bda" />
+The snapshot represents the clean baseline of the laboratory.
+If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
+
+# Lab Verification
+
