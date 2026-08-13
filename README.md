@@ -19,17 +19,19 @@ Here are the main objectives of this project:
 * Prepare the environment for future cybersecurity projects.
 
 # Lab Configuration
-| Components | Configurations |
+| 🧩Components | ⚙️Configurations |
 | --- | --- |
 | 🖥️ Host OS  | Windows 11 |
 | 🧠 Host RAM | 8 GB |
-| ⚡ Processor | Row 1 Col 2 |
-| 🧰 Hypervisor | Row 2 Col 2 |
-| 🐉 Security OS | Row 1 Col 2 |
-| 🧠 Kali RAM | Row 2 Col 2 |
-| 🌐 Virtual Network | Row 1 Col 2 |
-| 📡 Network Address | Row 2 Col 2 |
-| 🐧 Kali IP Address | Row 1 Col 2 |
-| 🚪 Default Gateway | Row 2 Col 2 |
-| 🌍 DNS Server | Row 1 Col 2 |
-| 🔮 Future VM Range | Row 2 Col 2 |
+| ⚡ Processor | Intel core i3 |
+| 🧰 Hypervisor | VirtualBox 7.2.14|
+| 🐉 Security OS | Kali Linux 2026.2 |
+| 🧠 Kali RAM | 2048 MB |
+| 🌐 Virtual Network | NAT Network |
+| 📡 Network Address | 10.0.0.0/24 |
+| 🐧 Kali IP Address | 10.0.0.2/24 |
+| 🚪 Default Gateway | 10.0.0.1 |
+| 🌍 DNS Server | 8.8.8.8 |
+| 🔮 Future VM Range | 10.0.0.3–10.0.0.120 |
+
+# Lab Setup Procedure
