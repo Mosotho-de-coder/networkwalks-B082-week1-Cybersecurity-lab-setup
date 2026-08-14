@@ -35,25 +35,25 @@ For this week's practical, I needed to:
 | 🔮 Future VM Range | 10.0.0.3–10.0.0.120 |
 
 # Lab Setup Procedure
-# Step 1. Download & install 7-zip:
+## Step 1. Download & install 7-zip:
 I installed 7-Zip on my Windows computer before working with the Kali Linux VM files.
 I used it to extract the compressed Kali Linux virtual-machine package so that the files could be imported into VirtualBox.
-# Step 2. Install VirtualBox
+## Step 2. Install VirtualBox
 I installed VirtualBox and used it to create and manage the virtual machine for this cybersecurity lab.
 Once VirtualBox was ready, I moved on to configuring the virtual network that would be used by Kali Linux.
-# Step 3. Create the NAT Network
+## Step 3. Create the NAT Network
 I created a NAT Network in VirtualBox and named it NatNetwork.
 The network was configured with the following settings:
-Network: NatNetwork
-IPv4 Prefix: 10.0.0.0/24
-DHCP: Enabled
-IPv6: Disabled
+* Network: NatNetwork
+* IPv4 Prefix: 10.0.0.0/24
+* DHCP: Enabled
+* IPv6: Disabled
 <img width="1916" height="1022" alt="image" src="https://github.com/user-attachments/assets/b65528ce-b25e-4348-af96-006d87caf888" />
 I chose this network because it gives the virtual machines their own network while still allowing them to access external networks. It also gives me a suitable network for adding other machines to the lab later.
 
-# Step 4. Import Kali Linux
+## Step 4. Import Kali Linux
 I downloaded the Kali Linux virtual machine and imported it into VirtualBox.
-After importing it, I connected the VM's network adapter to the NatNetwork I created in the previous step.
+After importing it, I connected the VM's network adapter to the NatNetwork I created in the previous step:
 <img width="976" height="650" alt="image" src="https://github.com/user-attachments/assets/e8c98b5b-0f73-4f09-a39f-26270f372953" />
 
 I also checked the resources assigned to the virtual machine and allocated 2048 MB of RAM to Kali Linux:
@@ -62,7 +62,7 @@ After the configuration was complete, I started Kali Linux successfully from Vir
 <img width="1917" height="926" alt="image" src="https://github.com/user-attachments/assets/cfc59892-8bab-4bd4-a274-46c3c9f556f3" />
 I also configured a shared folder to make transferring files between my Windows host and Kali Linux easier.
 
-# Step 5. Configure the Kali Linux Network
+## Step 5. Configure the Kali Linux Network
 I configured the Kali Linux network settings so that the VM could use the address assigned for the lab.
 My target configuration was:
 * IP Address: 10.0.0.2/24
@@ -70,7 +70,7 @@ My target configuration was:
 * DNS: 8.8.8.8
 <img width="1918" height="1021" alt="image" src="https://github.com/user-attachments/assets/1583296e-c25e-4e61-9677-963ea2bdfd38" />
 
-# Step 6. Create a Clean VM Snapshot
+## Step 6. Create a Clean VM Snapshot
 Once I was satisfied that the initial Kali setup was working, I created a snapshot of the virtual machine:
 <img width="1918" height="955" alt="image" src="https://github.com/user-attachments/assets/16cc2da8-05da-421d-87b9-e0ebfb035bda" />
 This gives me a working restore point. If I make changes during a future cybersecurity exercise and something goes wrong, I can return to 
@@ -86,12 +86,12 @@ this version instead of rebuilding the entire environment.
 |🧰 Nmap	 | nmap --version	| Confirmed Nmap was available |
 |🔄 Snapshot	 | Restore snapshot + ip a | Confirmed the saved configuration could be restored |
 
-# Results
+## Results
 The checks were performed after configuring the Kali network. The results confirmed that the VM was using the expected network configuration and that the lab was ready for the next practical exercises.
 
 
 # Problems Encountered & Solutions
-# Kali Linux Network Connection
+## Kali Linux Network Connection
 After configuring the static IPv4 settings, Kali Linux did not immediately connect through the expected network configuration.
 To refresh the connection, I brought the eth0 interface down and then brought it back up from the Kali terminal.
 sudo ifconfig eth0 down
@@ -100,17 +100,17 @@ sudo ifconfig eth0 up
 I then checked the network configuration and tested the connection again. After reconnecting the interface, Kali was communicating correctly and the network was working as expected.
 
 # What I Learned
-# Working With Virtual Networks
+## Working With Virtual Networks
 This exercise gave me more practical experience with how VirtualBox connects a virtual machine to a NAT Network and howthe network settings affect connectivity.
-# Kali Linux Network Configuration
+## Kali Linux Network Configuration
 I practiced checking and configuring IP addresses, gateways, and DNS settings directly inside Kali Linux.
-# Troubleshooting
+## Troubleshooting
 The network issue gave me a chance to troubleshoot the connection from the terminal instead of simply restarting the whole virtual machine.
-# Snapshots
+## Snapshots
 I also understood the value of creating a clean snapshot before starting future cybersecurity exercises. It gives me a reliable point to return to if something goes wrong.
-# Documentation
+## Documentation
 Finally, I learned the importance of recording the configuration, commands, screenshots, and troubleshooting steps as part of a technical cybersecurity project.
 
 # Week 1 Status
-# Lab setup completed successfully.
+## Lab setup completed successfully.
 My Kali Linux environment is configured, the network connection has been tested, and a clean VM snapshot has been created. The lab is now ready for the upcoming Ethical Hacking & Cybersecurity practical exercises.
